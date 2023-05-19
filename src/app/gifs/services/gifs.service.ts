@@ -45,7 +45,9 @@ export class GifsService {
         if(temporal) {
             this._tagsHistory = JSON.parse(temporal);
 
-            this.searchTag(this._tagsHistory[0]);
+            if (temporal.length > 0) {
+                this.searchTag(this._tagsHistory[0]);
+            }
         }
     }
 
